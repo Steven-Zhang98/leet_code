@@ -1,11 +1,14 @@
----
-up: 
-in:
-  - CS
-related: 
-created: 2024-04-07
----
+- Condition
+	- We use binary search when we face a continuous array and want to find a certain element in it. 
+- Ideas for solving the problem
+	- set right and left pointer
+	- start the loop and determine if the mid-value is equal to the target
+	- the loop ends when the left is bigger than the right
+		- `nums[mid] == target`  then return the mid
+		- `nums[mid] < target`  then move the left pointer to mid
+		- `nums[mid] > target` then move the right pointer to mid
  
+    
 ## Description
 
 Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, then return its index. Otherwise, return `-1`.
