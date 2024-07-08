@@ -7,7 +7,10 @@
 		- `nums[mid] == target`  then return the mid
 		- `nums[mid] < target`  then move the left pointer to mid
 		- `nums[mid] > target` then move the right pointer to mid
- 
+
+ Q: 在二分查找算法中，为什么需要使用 `left = mid + 1` 和 `right = mid - 1` 来调整边界？
+?
+A: 为了确保搜索区间逐步缩小，并避免无限循环。当 `nums[mid] < target` 时，目标值一定在 `mid` 的右侧，因此需要将 `left` 更新为 `mid + 1`。同理，当 `nums[mid] > target` 时，目标值一定在 `mid` 的左侧，因此需要将 `right` 更新为 `mid - 1`。
     
 ## Example
 
