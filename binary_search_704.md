@@ -8,9 +8,9 @@
 		- `nums[mid] < target`  then move the left pointer to mid
 		- `nums[mid] > target` then move the right pointer to mid
 
- Q: 在二分查找算法中，为什么需要使用 `left = mid + 1` 和 `right = mid - 1` 来调整边界？
+Q: Why is it necessary to use `left = mid + 1` and `right = mid - 1` to adjust the boundaries in the binary lookup algorithm?
 ?
-A: 为了确保搜索区间逐步缩小，并避免无限循环。当 `nums[mid] < target` 时，目标值一定在 `mid` 的右侧，因此需要将 `left` 更新为 `mid + 1`。同理，当 `nums[mid] > target` 时，目标值一定在 `mid` 的左侧，因此需要将 `right` 更新为 `mid - 1`。
+A: To ensure that the search interval is progressively smaller and to avoid infinite loops. When `nums[mid] < target`, the target value must be on the right side of `mid`, so `left` needs to be updated to `mid + 1`. Similarly, when `nums[mid] > target`, the target must be to the left of `mid`, so update `right` to `mid - 1`.
     
 ## Example
 
